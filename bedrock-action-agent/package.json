@@ -1,0 +1,49 @@
+{
+    "name": "custom-amazon-bedrock-agent-action",
+    "version": "0.6.0",
+    "description": "Custom Amazon Bedrock Agent for GitHub Actions",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "test:coverage": "jest --coverage",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "format": "prettier --write \"**/*.{js,json,md,yml,yaml}\"",
+        "format:check": "prettier --check \"**/*.{js,json,md,yml,yaml}\"",
+        "build": "ncc build index.js -o dist --source-map --license licenses.txt",
+        "prepare": "npm run build"
+    },
+    "author": "John Reilly Pospos",
+    "license": "MIT",
+    "dependencies": {
+        "@actions/core": "^1.10.1",
+        "@actions/github": "^5.1.1",
+        "@aws-sdk/client-bedrock-agent-runtime": "^3.405.0",
+        "minimatch": "^5.1.2"
+    },
+    "devDependencies": {
+        "@types/jest": "^29.5.0",
+        "@types/node": "^20.0.0",
+        "eslint": "^8.50.0",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-jest": "^27.4.0",
+        "jest": "^29.7.0",
+        "prettier": "^3.0.0",
+        "@vercel/ncc": "^0.38.0"
+    },
+    "engines": {
+        "node": ">=16.0.0"
+    },
+    "keywords": [
+        "github-actions",
+        "amazon-bedrock",
+        "code-review",
+        "ai",
+        "aws"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/severity1/custom-amazon-bedrock-agent-action.git"
+    }
+}
